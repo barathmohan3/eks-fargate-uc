@@ -26,6 +26,10 @@ module "alb" {
   subnets = var.subnets
 }
 
+module "ecr" {
+  source = "./modules/ecr"
+}
+
 module "frontend" {
   source = "./modules/frontend"
   frontend_image = var.frontend_image
