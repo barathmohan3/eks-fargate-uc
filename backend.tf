@@ -1,7 +1,9 @@
 terraform {
   backend "s3" {
-    bucket = "your-terraform-state-bucket"
-    key    = "eks/terraform.tfstate"
-    region = "us-west-2"
+    bucket         = "my-oidc-bucket-15328069840"
+    key            = "k8suc/terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+    use_lockfile   = false
   }
 }
